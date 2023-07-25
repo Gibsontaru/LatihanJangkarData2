@@ -17,11 +17,39 @@
             padding: 0;
             margin: 0;
         }
+        #map{
+            z-index: 1;
+        }
+        .tutuplogo{
+           position: absolute;
+            top: 10px;
+            left: 50px;
+            z-index: 2;
+            border: 1px solid #ffffff40; 
+            display: flex;
+            align-items: center;
+            background: #ffffff40;
+            width: 92.5vw;
+        }
+        .logo{
+            width: 100px;  
+        }
+        .tutuplogo span{
+            font-size: 20px;
+/*            vertical-align: middle;*/
+        }
+        .jangkar{
+            font-weight: bold;
+        }
         </style>
-        <title></title>
+        <title>JANGKAR DATA KABUPATEN NATUNA</title>
     </head>
     <body>
-        <p>testing</p>
+        <div class="tutuplogo">
+            <img src="images/logo.png" class="logo">
+            <div><span class="jangkar">JANGKAR DATA </span><br><span>Jaringan Komprehensif Pintar Data Kabupaten Natuna</span></div>    
+        </div>
+        
         <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
@@ -93,184 +121,184 @@
         layer_OSMStandard_0;
         map.addLayer(layer_OSMStandard_0);
         function pop_Batas_Administrasi_Desa_Kelurahan_AR_1(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
+            // layer.on({
+            //     mouseout: function(e) {
+            //         for (i in e.target._eventParents) {
+            //             e.target._eventParents[i].resetStyle(e.target);
+            //         }
+            //         if (typeof layer.closePopup == 'function') {
+            //             layer.closePopup();
+            //         } else {
+            //             layer.eachLayer(function(feature){
+            //                 feature.closePopup()
+            //             });
+            //         }
+            //     },
+            //     mouseover: highlightFeature,
+            // });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">NAMOBJ_1</th>\
+                        <th scope="row">NAMOBJ_1 :</th>\
                         <td>' + (feature.properties['NAMOBJ_1'] !== null ? autolinker.link(feature.properties['NAMOBJ_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">FCODE_1</th>\
+                        <th scope="row">FCODE_1 :</th>\
                         <td>' + (feature.properties['FCODE_1'] !== null ? autolinker.link(feature.properties['FCODE_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">REMARK_1</th>\
+                        <th scope="row">REMARK_1 :</th>\
                         <td>' + (feature.properties['REMARK_1'] !== null ? autolinker.link(feature.properties['REMARK_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">METADATA_1</th>\
+                        <th scope="row">METADATA_1 :</th>\
                         <td>' + (feature.properties['METADATA_1'] !== null ? autolinker.link(feature.properties['METADATA_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">SRS_ID_1</th>\
+                        <th scope="row">SRS_ID_1 :</th>\
                         <td>' + (feature.properties['SRS_ID_1'] !== null ? autolinker.link(feature.properties['SRS_ID_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">KDBBPS_1</th>\
+                        <th scope="row">KDBBPS_1 :</th>\
                         <td>' + (feature.properties['KDBBPS_1'] !== null ? autolinker.link(feature.properties['KDBBPS_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">KDCBPS_1</th>\
+                        <th scope="row">KDCBPS_1 :</th>\
                         <td>' + (feature.properties['KDCBPS_1'] !== null ? autolinker.link(feature.properties['KDCBPS_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">KDCPUM_1</th>\
+                        <th scope="row">KDCPUM_1 :</th>\
                         <td>' + (feature.properties['KDCPUM_1'] !== null ? autolinker.link(feature.properties['KDCPUM_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">KDEBPS_1</th>\
+                        <th scope="row">KDEBPS_1 :</th>\
                         <td>' + (feature.properties['KDEBPS_1'] !== null ? autolinker.link(feature.properties['KDEBPS_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">KDEPUM_1</th>\
+                        <th scope="row">KDEPUM_1 :</th>\
                         <td>' + (feature.properties['KDEPUM_1'] !== null ? autolinker.link(feature.properties['KDEPUM_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">KDPBPS_1</th>\
+                        <th scope="row">KDPBPS_1 :</th>\
                         <td>' + (feature.properties['KDPBPS_1'] !== null ? autolinker.link(feature.properties['KDPBPS_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">KDPKAB_1</th>\
+                        <th scope="row">KDPKAB_1 :</th>\
                         <td>' + (feature.properties['KDPKAB_1'] !== null ? autolinker.link(feature.properties['KDPKAB_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">KDPPUM_1</th>\
+                        <th scope="row">KDPPUM_1 :</th>\
                         <td>' + (feature.properties['KDPPUM_1'] !== null ? autolinker.link(feature.properties['KDPPUM_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">LUASWH_1</th>\
+                        <th scope="row">LUASWH_1 :</th>\
                         <td>' + (feature.properties['LUASWH_1'] !== null ? autolinker.link(feature.properties['LUASWH_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">TIPADM_1</th>\
+                        <th scope="row">TIPADM_1 :</th>\
                         <td>' + (feature.properties['TIPADM_1'] !== null ? autolinker.link(feature.properties['TIPADM_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">WADMKC_1</th>\
+                        <th scope="row">WADMKC_1 :</th>\
                         <td>' + (feature.properties['WADMKC_1'] !== null ? autolinker.link(feature.properties['WADMKC_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">WADMKD_1</th>\
+                        <th scope="row">WADMKD_1 :</th>\
                         <td>' + (feature.properties['WADMKD_1'] !== null ? autolinker.link(feature.properties['WADMKD_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">WADMKK_1</th>\
+                        <th scope="row">WADMKK_1 :</th>\
                         <td>' + (feature.properties['WADMKK_1'] !== null ? autolinker.link(feature.properties['WADMKK_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">WADMPR_1</th>\
+                        <th scope="row">WADMPR_1 :</th>\
                         <td>' + (feature.properties['WADMPR_1'] !== null ? autolinker.link(feature.properties['WADMPR_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">WIADKC_1</th>\
+                        <th scope="row">WIADKC_1 :</th>\
                         <td>' + (feature.properties['WIADKC_1'] !== null ? autolinker.link(feature.properties['WIADKC_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">WIADKK_1</th>\
+                        <th scope="row">WIADKK_1 :</th>\
                         <td>' + (feature.properties['WIADKK_1'] !== null ? autolinker.link(feature.properties['WIADKK_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">WIADPR_1</th>\
+                        <th scope="row">WIADPR_1 :</th>\
                         <td>' + (feature.properties['WIADPR_1'] !== null ? autolinker.link(feature.properties['WIADPR_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">WIADKD_1</th>\
+                        <th scope="row">WIADKD_1 :</th>\
                         <td>' + (feature.properties['WIADKD_1'] !== null ? autolinker.link(feature.properties['WIADKD_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">CATATAN_1</th>\
+                        <th scope="row">CATATAN_1 :</th>\
                         <td>' + (feature.properties['CATATAN_1'] !== null ? autolinker.link(feature.properties['CATATAN_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Catatan</th>\
+                        <th scope="row">Catatan :</th>\
                         <td>' + (feature.properties['Catatan'] !== null ? autolinker.link(feature.properties['Catatan'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Perimeter</th>\
+                        <th scope="row">Perimeter :</th>\
                         <td>' + (feature.properties['Perimeter'] !== null ? autolinker.link(feature.properties['Perimeter'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Area</th>\
+                        <th scope="row">Area :</th>\
                         <td>' + (feature.properties['Area'] !== null ? autolinker.link(feature.properties['Area'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Acres</th>\
+                        <th scope="row">Acres :</th>\
                         <td>' + (feature.properties['Acres'] !== null ? autolinker.link(feature.properties['Acres'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Hectares</th>\
+                        <th scope="row">Hectares :</th>\
                         <td>' + (feature.properties['Hectares'] !== null ? autolinker.link(feature.properties['Hectares'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Luas_Km²</th>\
+                        <th scope="row">Luas_Km² :</th>\
                         <td>' + (feature.properties['Luas_Km²'] !== null ? autolinker.link(feature.properties['Luas_Km²'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Satuan</th>\
+                        <th scope="row">Satuan :</th>\
                         <td>' + (feature.properties['Satuan'] !== null ? autolinker.link(feature.properties['Satuan'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Luas_Ha_1</th>\
+                        <th scope="row">Luas_Ha_1 :</th>\
                         <td>' + (feature.properties['Luas_Ha_1'] !== null ? autolinker.link(feature.properties['Luas_Ha_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">DESA_KEL</th>\
+                        <th scope="row">DESA_KEL :</th>\
                         <td>' + (feature.properties['DESA_KEL'] !== null ? autolinker.link(feature.properties['DESA_KEL'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">KECAMATAN</th>\
+                        <th scope="row">KECAMATAN :</th>\
                         <td>' + (feature.properties['KECAMATAN'] !== null ? autolinker.link(feature.properties['KECAMATAN'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">PERDA_DESA</th>\
+                        <th scope="row">PERDA_DESA :</th>\
                         <td>' + (feature.properties['PERDA_DESA'] !== null ? autolinker.link(feature.properties['PERDA_DESA'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">PERDA_PRBH</th>\
+                        <th scope="row">PERDA_PRBH :</th>\
                         <td>' + (feature.properties['PERDA_PRBH'] !== null ? autolinker.link(feature.properties['PERDA_PRBH'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">PERBUB_DS</th>\
+                        <th scope="row">PERBUB_DS :</th>\
                         <td>' + (feature.properties['PERBUB_DS'] !== null ? autolinker.link(feature.properties['PERBUB_DS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">KET</th>\
+                        <th scope="row">KET :</th>\
                         <td>' + (feature.properties['KET'] !== null ? autolinker.link(feature.properties['KET'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Keterangan</th>\
+                        <th scope="row">Keterangan :</th>\
                         <td>' + (feature.properties['Keterangan'] !== null ? autolinker.link(feature.properties['Keterangan'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">PERUBAHAN</th>\
+                        <th scope="row">PERUBAHAN :</th>\
                         <td>' + (feature.properties['PERUBAHAN'] !== null ? autolinker.link(feature.properties['PERUBAHAN'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent,{maxHeight:500});
         }
 
         function style_Batas_Administrasi_Desa_Kelurahan_AR_1_0(feature) {
@@ -532,21 +560,21 @@
         bounds_group.addLayer(layer_Batas_Administrasi_Desa_Kelurahan_AR_1);
         map.addLayer(layer_Batas_Administrasi_Desa_Kelurahan_AR_1);
         function pop_TOPONIMI_PULAU_PT_2(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
+            // layer.on({
+            //     mouseout: function(e) {
+            //         for (i in e.target._eventParents) {
+            //             e.target._eventParents[i].resetStyle(e.target);
+            //         }
+            //         if (typeof layer.closePopup == 'function') {
+            //             layer.closePopup();
+            //         } else {
+            //             layer.eachLayer(function(feature){
+            //                 feature.closePopup()
+            //             });
+            //         }
+            //     },
+            //     mouseover: highlightFeature,
+            // });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Id'] !== null ? autolinker.link(feature.properties['Id'].toLocaleString()) : '') + '</td>\
@@ -628,21 +656,21 @@
         bounds_group.addLayer(layer_TOPONIMI_PULAU_PT_2);
         map.addLayer(layer_TOPONIMI_PULAU_PT_2);
         function pop_TOPONIMI_DESAKELURAHAN_PT_3(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
+            // layer.on({
+            //     mouseout: function(e) {
+            //         for (i in e.target._eventParents) {
+            //             e.target._eventParents[i].resetStyle(e.target);
+            //         }
+            //         if (typeof layer.closePopup == 'function') {
+            //             layer.closePopup();
+            //         } else {
+            //             layer.eachLayer(function(feature){
+            //                 feature.closePopup()
+            //             });
+            //         }
+            //     },
+            //     mouseover: highlightFeature,
+            // });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Id'] !== null ? autolinker.link(feature.properties['Id'].toLocaleString()) : '') + '</td>\
@@ -710,21 +738,21 @@
         bounds_group.addLayer(layer_TOPONIMI_DESAKELURAHAN_PT_3);
         map.addLayer(layer_TOPONIMI_DESAKELURAHAN_PT_3);
         function pop_DATA_PELABUHAN_PT_4(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
+            // layer.on({
+            //     mouseout: function(e) {
+            //         for (i in e.target._eventParents) {
+            //             e.target._eventParents[i].resetStyle(e.target);
+            //         }
+            //         if (typeof layer.closePopup == 'function') {
+            //             layer.closePopup();
+            //         } else {
+            //             layer.eachLayer(function(feature){
+            //                 feature.closePopup()
+            //             });
+            //         }
+            //     },
+            //     mouseover: highlightFeature,
+            // });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Id'] !== null ? autolinker.link(feature.properties['Id'].toLocaleString()) : '') + '</td>\
@@ -799,7 +827,8 @@
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
-            iconUrl: 'markers/transport_port.svg',
+            // iconUrl: 'markers/transport_port.svg',
+            iconUrl: 'images/symbol.png',
             iconSize: [24.168, 24.168]
         }),
                 interactive: true,
